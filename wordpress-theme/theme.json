@@ -1,0 +1,182 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "background",          "color": "#FCFBF1", "name": "Background" },
+        { "slug": "foreground",          "color": "#000000", "name": "Foreground" },
+        { "slug": "primary",             "color": "#00416A", "name": "Primary" },
+        { "slug": "primary-foreground",  "color": "#FFFFFF", "name": "Primary Foreground" },
+        { "slug": "secondary",           "color": "#A799B7", "name": "Secondary" },
+        { "slug": "secondary-foreground","color": "#000000", "name": "Secondary Foreground" },
+        { "slug": "accent",              "color": "#7EA172", "name": "Accent" },
+        { "slug": "accent-foreground",   "color": "#FFFFFF", "name": "Accent Foreground" },
+        { "slug": "muted",               "color": "#E6E6E6", "name": "Muted" },
+        { "slug": "muted-foreground",    "color": "#757575", "name": "Muted Foreground" },
+        { "slug": "border",              "color": "#E6E6E6", "name": "Border" },
+        { "slug": "destructive",         "color": "#DC2626", "name": "Destructive" }
+      ]
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"P22 Franklin Caslon\", Georgia, serif",
+          "slug": "headline",
+          "name": "Headline"
+        },
+        {
+          "fontFamily": "\"Broadsheet\", Georgia, serif",
+          "slug": "heading",
+          "name": "Heading"
+        },
+        {
+          "fontFamily": "\"Libre Franklin\", system-ui, sans-serif",
+          "slug": "body",
+          "name": "Body",
+          "fontFace": [
+            {
+              "fontFamily": "Libre Franklin",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/fonts/libre-franklin-400.woff2" ]
+            },
+            {
+              "fontFamily": "Libre Franklin",
+              "fontWeight": "500",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/fonts/libre-franklin-500.woff2" ]
+            },
+            {
+              "fontFamily": "Libre Franklin",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/fonts/libre-franklin-700.woff2" ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Schooner Script\", cursive",
+          "slug": "accent-font",
+          "name": "Accent Script"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "xs",       "size": "12px", "name": "XS" },
+        { "slug": "sm",       "size": "14px", "name": "SM" },
+        { "slug": "base",     "size": "16px", "name": "Base" },
+        { "slug": "md",       "size": "20px", "name": "MD" },
+        { "slug": "lg",       "size": "28px", "name": "LG" },
+        { "slug": "xl",       "size": "42px", "name": "XL" },
+        { "slug": "2xl",      "size": "56px", "name": "2XL" }
+      ]
+    },
+    "spacing": {
+      "units": [ "px", "em", "rem", "vh", "vw", "%" ]
+    },
+    "border": {
+      "defaultRadius": false
+    },
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--headline)"
+        }
+      }
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--foreground)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--body)",
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--headline)",
+          "fontSize": "var(--wp--preset--font-size--2xl)",
+          "fontWeight": "400",
+          "lineHeight": "1.2"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--headline)",
+          "fontSize": "var(--wp--preset--font-size--xl)",
+          "fontWeight": "400",
+          "lineHeight": "1.3"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontSize": "var(--wp--preset--font-size--lg)",
+          "fontWeight": "400",
+          "lineHeight": "1.4"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontSize": "var(--wp--preset--font-size--md)",
+          "fontWeight": "400"
+        }
+      },
+      "link": {
+        "color": { "text": "var(--wp--preset--color--primary)" },
+        ":hover": {
+          "color": { "text": "var(--wp--preset--color--accent)" }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--primary)",
+          "text": "var(--wp--preset--color--primary-foreground)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
+          "fontSize": "var(--wp--preset--font-size--base)"
+        },
+        "border": { "radius": "8px" },
+        ":hover": {
+          "color": { "background": "#003558" }
+        }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Header", "area": "header" },
+    { "name": "footer", "title": "Footer", "area": "footer" }
+  ],
+  "customTemplates": [
+    { "name": "front-page",       "title": "Front Page",          "postTypes": [ "page" ] },
+    { "name": "archive",          "title": "Research Archive",     "postTypes": [ "post" ] },
+    { "name": "archive-product",  "title": "Shop Archive",         "postTypes": [ "product" ] },
+    { "name": "single",           "title": "Single Post",          "postTypes": [ "post" ] },
+    { "name": "single-product",   "title": "Single Product",       "postTypes": [ "product" ] },
+    { "name": "page-about",       "title": "About Page",           "postTypes": [ "page" ] },
+    { "name": "cart",             "title": "Cart",                 "postTypes": [ "page" ] },
+    { "name": "checkout",         "title": "Checkout",             "postTypes": [ "page" ] },
+    { "name": "search",           "title": "Search Results",       "postTypes": [ "post", "page" ] }
+  ]
+}

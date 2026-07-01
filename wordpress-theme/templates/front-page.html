@@ -1,0 +1,99 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+
+	<!-- HERO ─────────────────────────────────────────────────────────── -->
+	<!-- wp:cover {"minHeight":85,"minHeightUnit":"vh","isDark":false,"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}}} -->
+	<div class="wp-block-cover" style="min-height:85vh;background-color:var(--wp--preset--color--background);padding-top:6rem;padding-bottom:6rem">
+		<div class="wp-block-cover__inner-container">
+
+			<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--accent-font)","fontSize":"clamp(2.5rem,6vw,4.5rem)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
+			<h1 class="wp-block-heading has-text-align-center">At the Sign of the Rainbow &amp; Dove</h1>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"var(--wp--preset--font-size--md)"},"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
+			<p class="has-text-align-center">Explore the rich history of 18th-century textile arts through research and handcrafted products.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem"}}} -->
+			<div class="wp-block-buttons">
+				<!-- wp:button {"backgroundColor":"primary","textColor":"primary-foreground","style":{"border":{"radius":"8px"},"typography":{"fontFamily":"var(--wp--preset--font-family--heading)","fontSize":"var(--wp--preset--font-size--md)"},"spacing":{"padding":{"top":"0.75rem","bottom":"0.75rem","left":"2rem","right":"2rem"}}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-primary-foreground-color has-background has-text-color wp-element-button" href="/shop">Visit the Shop</a></div>
+				<!-- /wp:button -->
+				<!-- wp:button {"backgroundColor":"accent","textColor":"accent-foreground","style":{"border":{"radius":"8px"},"typography":{"fontFamily":"var(--wp--preset--font-family--heading)","fontSize":"var(--wp--preset--font-size--md)"},"spacing":{"padding":{"top":"0.75rem","bottom":"0.75rem","left":"2rem","right":"2rem"}}}} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-accent-background-color has-accent-foreground-color has-background has-text-color wp-element-button" href="/research">Explore Research</a></div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+
+		</div>
+	</div>
+	<!-- /wp:cover -->
+
+	<!-- FEATURED RESEARCH ───────────────────────────────────────────── -->
+	<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="background-color:var(--wp--preset--color--background);padding-top:5rem;padding-bottom:5rem">
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
+		<h2 class="wp-block-heading">Recent Research</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)"},"color":{"text":"var(--wp--preset--color--muted-foreground)"}}} -->
+		<p>Exploring history through color and cloth.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date"},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-query">
+			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+				<!-- wp:pattern {"slug":"rainbow-dove/query-loop-post-card"} /-->
+			<!-- /wp:post-template -->
+		</div>
+		<!-- /wp:query -->
+
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+		<div class="wp-block-buttons">
+			<!-- wp:button {"style":{"color":{"text":"var(--wp--preset--color--primary)","background":"transparent"},"border":{"width":"0"},"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/research">View All Posts →</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- FEATURED PRODUCTS ───────────────────────────────────────────── -->
+	<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="padding-top:5rem;padding-bottom:5rem">
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
+		<h2 class="wp-block-heading">From the Shop</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)"},"color":{"text":"var(--wp--preset--color--muted-foreground)"}}} -->
+		<p>Hand-dyed yarns, fabrics, and historical kits.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:woocommerce/product-collection {"query":{"perPage":3,"order":"asc","orderBy":"date"},"queryContextIncludes":["collection"],"displayLayout":{"type":"flex","columns":3}} -->
+		<div class="wp-block-woocommerce-product-collection">
+			<!-- wp:woocommerce/product-template -->
+				<!-- wp:pattern {"slug":"rainbow-dove/query-loop-product-card"} /-->
+			<!-- /wp:woocommerce/product-template -->
+		</div>
+		<!-- /wp:woocommerce/product-collection -->
+
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+		<div class="wp-block-buttons">
+			<!-- wp:button {"style":{"color":{"text":"var(--wp--preset--color--primary)","background":"transparent"},"border":{"width":"0"},"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/shop">Browse Collection →</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

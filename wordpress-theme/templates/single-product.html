@@ -1,0 +1,52 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+
+		<!-- wp:woocommerce/store-notices /-->
+
+		<!-- wp:columns {"style":{"spacing":{"blockGap":"4rem"}}} -->
+		<div class="wp-block-columns">
+
+			<!-- wp:column {"width":"50%"} -->
+			<div class="wp-block-column" style="flex-basis:50%">
+				<!-- wp:woocommerce/product-image-gallery /-->
+			</div>
+			<!-- /wp:column -->
+
+			<!-- wp:column {"width":"50%"} -->
+			<div class="wp-block-column" style="flex-basis:50%">
+				<!-- wp:post-terms {"term":"product_cat","style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"var(--wp--preset--font-size--sm)","fontWeight":"700","textTransform":"uppercase"},"color":{"text":"var(--wp--preset--color--accent)"}}} /-->
+				<!-- wp:post-title {"level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)","fontSize":"var(--wp--preset--font-size--xl)"},"color":{"text":"var(--wp--preset--color--primary)"}}} /-->
+				<!-- wp:woocommerce/product-price {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"var(--wp--preset--font-size--lg)","fontWeight":"700"},"color":{"text":"var(--wp--preset--color--accent)"}}} /-->
+				<!-- wp:separator {"style":{"color":{"background":"var(--wp--preset--color--border)"}}} --><hr class="wp-block-separator" /><!-- /wp:separator -->
+				<!-- wp:post-excerpt {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)"}}} /-->
+				<!-- wp:woocommerce/add-to-cart-form /-->
+			</div>
+			<!-- /wp:column -->
+
+		</div>
+		<!-- /wp:columns -->
+
+		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"4rem","bottom":"4rem"}}}} --><hr class="wp-block-separator" /><!-- /wp:separator -->
+
+		<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
+		<h3 class="wp-block-heading">Product Details</h3>
+		<!-- /wp:heading -->
+		<!-- wp:post-content /-->
+
+		<!-- wp:heading {"level":3,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"3rem"}}}} -->
+		<h3 class="wp-block-heading">You May Also Like</h3>
+		<!-- /wp:heading -->
+		<!-- wp:woocommerce/related-products {"columns":4} /-->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

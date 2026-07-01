@@ -1,0 +1,46 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+
+	<!-- wp:cover {"minHeight":25,"minHeightUnit":"vh","style":{"color":{"background":"var(--wp--preset--color--primary)"}}} -->
+	<div class="wp-block-cover" style="min-height:25vh;background-color:var(--wp--preset--color--primary)">
+		<div class="wp-block-cover__inner-container">
+			<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)","fontSize":"var(--wp--preset--font-size--2xl)"},"color":{"text":"var(--wp--preset--color--primary-foreground)"}}} -->
+			<h1 class="wp-block-heading has-text-align-center">The Shop</h1>
+			<!-- /wp:heading -->
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.85)"}}} -->
+			<p class="has-text-align-center">Hand-dyed yarns, handkerchiefs, and historical kits.</p>
+			<!-- /wp:paragraph -->
+		</div>
+	</div>
+	<!-- /wp:cover -->
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+
+		<!-- wp:woocommerce/store-notices /-->
+
+		<!-- wp:woocommerce/product-collection {"query":{"perPage":12,"order":"asc","orderBy":"date"},"queryContextIncludes":["collection"],"displayLayout":{"type":"flex","columns":3}} -->
+		<div class="wp-block-woocommerce-product-collection">
+
+			<!-- wp:woocommerce/product-template -->
+				<!-- wp:pattern {"slug":"rainbow-dove/query-loop-product-card"} /-->
+			<!-- /wp:woocommerce/product-template -->
+
+			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"3rem"}}}} -->
+				<!-- wp:query-pagination-previous /-->
+				<!-- wp:query-pagination-numbers /-->
+				<!-- wp:query-pagination-next /-->
+			<!-- /wp:query-pagination -->
+
+		</div>
+		<!-- /wp:woocommerce/product-collection -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

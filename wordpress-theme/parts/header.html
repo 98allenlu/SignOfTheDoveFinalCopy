@@ -1,0 +1,48 @@
+<!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"constrained","wideSize":"100%"},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+<header class="wp-block-group site-header">
+
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group">
+
+		<!-- Logo / Site Title -->
+		<!-- wp:site-title {"style":{"typography":{"fontFamily":"var(--rd-font-headline)","fontSize":"clamp(1.1rem, 2vw, 1.4rem)"},"color":{"text":"var(--rd-foreground)"}}} /-->
+
+		<!-- Desktop nav + utilities -->
+		<!-- wp:group {"className":"site-header__utilities","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"1.5rem"}}} -->
+		<div class="wp-block-group site-header__utilities">
+
+			<!-- wp:navigation {"overlayMenu":"mobile","style":{"typography":{"fontFamily":"var(--rd-font-heading)","fontSize":"1rem"},"spacing":{"blockGap":"2rem"}}} -->
+				<!-- wp:navigation-link {"label":"Home","url":"/"} /-->
+
+				<!-- wp:navigation-submenu {"label":"Shop","url":"/shop"} -->
+					<!-- wp:navigation-link {"label":"Yarn","url":"/product-category/yarn"} /-->
+					<!-- wp:navigation-link {"label":"Handkerchiefs","url":"/product-category/handkerchiefs"} /-->
+					<!-- wp:navigation-link {"label":"Kits","url":"/product-category/kits"} /-->
+				<!-- /wp:navigation-submenu -->
+
+				<!-- wp:navigation-submenu {"label":"Research","url":"/research"} -->
+					<!-- wp:navigation-link {"label":"Creation of Color","url":"/category/creation-of-color"} /-->
+					<!-- wp:navigation-link {"label":"Dyer-Scowerers","url":"/category/dyer-scowerers"} /-->
+					<!-- wp:navigation-link {"label":"Social History","url":"/category/social-history"} /-->
+					<!-- wp:navigation-link {"label":"Textile History","url":"/category/textile-history"} /-->
+					<!-- wp:navigation-link {"label":"Soapmaking","url":"/category/soapmaking"} /-->
+					<!-- wp:navigation-link {"label":"Paper","url":"/category/paper"} /-->
+				<!-- /wp:navigation-submenu -->
+
+				<!-- wp:navigation-link {"label":"About","url":"/about"} /-->
+			<!-- /wp:navigation -->
+
+			<!-- Search icon -->
+			<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search…","buttonText":"Search","buttonPosition":"button-only","buttonUseIcon":true,"style":{"border":{"radius":"4px"}}} /-->
+
+			<!-- WooCommerce mini-cart -->
+			<!-- wp:woocommerce/mini-cart /-->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</header>
+<!-- /wp:group -->
