@@ -16,10 +16,12 @@ export function PageHeaderShape({
   return (
     <div className={cn("relative w-full h-[370px] flex items-start pt-10 justify-center text-white", className)} {...props}>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <svg 
-          className="w-full h-auto block min-h-[170px]" 
-          fill="none" 
-          preserveAspectRatio="none" 
+        <svg
+          className="w-full h-auto block min-h-[170px]"
+          width="100%"
+          height="100%"
+          fill="none"
+          preserveAspectRatio="xMidYMid slice"
           viewBox="0 0 1341.67 153.48"
         >
           <path d={svgPaths.p1cbb9000} fill={fillColor} />

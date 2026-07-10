@@ -1,11 +1,11 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","layout":{"type":"default"},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group">
 
 	<!-- HERO ─────────────────────────────────────────────────────────── -->
-	<!-- wp:cover {"minHeight":85,"minHeightUnit":"vh","isDark":false,"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}}} -->
-	<div class="wp-block-cover" style="min-height:85vh;background-color:var(--wp--preset--color--background);padding-top:6rem;padding-bottom:6rem">
+	<!-- wp:cover {"minHeight":85,"minHeightUnit":"vh","isDark":false,"align":"full","style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}}} -->
+	<div class="wp-block-cover alignfull" style="min-height:85vh;background-color:var(--wp--preset--color--background);padding-top:6rem;padding-bottom:6rem">
 		<div class="wp-block-cover__inner-container">
 
 			<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--accent-font)","fontSize":"clamp(2.5rem,6vw,4.5rem)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
@@ -32,8 +32,8 @@
 	<!-- /wp:cover -->
 
 	<!-- FEATURED RESEARCH ───────────────────────────────────────────── -->
-	<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="background-color:var(--wp--preset--color--background);padding-top:5rem;padding-bottom:5rem">
+	<!-- wp:group {"align":"full","style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="background-color:var(--wp--preset--color--background);padding-top:5rem;padding-bottom:5rem;padding-left:2rem;padding-right:2rem">
 
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
 		<h2 class="wp-block-heading">Recent Research</h2>
@@ -43,7 +43,7 @@
 		<p>Exploring history through color and cloth.</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date"},"layout":{"type":"constrained"}} -->
+		<!-- wp:query {"query":{"perPage":3,"postType":"post","order":"desc","orderBy":"date"},"layout":{"type":"default"}} -->
 		<div class="wp-block-query">
 			<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
 				<!-- wp:pattern {"slug":"rainbow-dove/query-loop-post-card"} /-->
@@ -62,9 +62,12 @@
 	</div>
 	<!-- /wp:group -->
 
+	<!-- SEPARATOR / TEXTURE SECTION ─────────────────────────────────── -->
+	<!-- wp:pattern {"slug":"rainbow-dove/separator-pattern"} /-->
+
 	<!-- FEATURED PRODUCTS ───────────────────────────────────────────── -->
-	<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="padding-top:5rem;padding-bottom:5rem">
+	<!-- wp:group {"align":"full","style":{"color":{"background":"var(--wp--preset--color--background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="padding-top:5rem;padding-bottom:5rem;padding-left:2rem;padding-right:2rem">
 
 		<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)"},"color":{"text":"var(--wp--preset--color--primary)"}}} -->
 		<h2 class="wp-block-heading">From the Shop</h2>

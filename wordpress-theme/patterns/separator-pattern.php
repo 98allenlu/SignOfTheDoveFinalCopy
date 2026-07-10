@@ -7,12 +7,18 @@
  * Keywords: separator, texture, background, section, paper
  */
 ?>
-<!-- wp:group {"className":"rd-separator-pattern","style":{"color":{"background":"var(--rd-background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group rd-separator-pattern" style="background-color:var(--rd-background);padding-top:5rem;padding-bottom:5rem">
+<!-- wp:group {"className":"rd-separator-pattern","style":{"color":{"background":"var(--rd-background)"},"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"default"},"align":"full"} -->
+<div class="wp-block-group rd-separator-pattern alignfull" style="background-color:var(--rd-background);padding-top:5rem;padding-bottom:5rem">
 
-	<!-- wp:paragraph {"placeholder":"Add content here…","style":{"typography":{"fontFamily":"var(--rd-font-body)"}}} -->
-	<p></p>
-	<!-- /wp:paragraph -->
+	<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"padding":{"left":"2rem","right":"2rem"}}}} -->
+	<div class="wp-block-group">
+
+		<!-- wp:paragraph {"placeholder":"Add content here…","style":{"typography":{"fontFamily":"var(--rd-font-body)"}}} -->
+		<p></p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->

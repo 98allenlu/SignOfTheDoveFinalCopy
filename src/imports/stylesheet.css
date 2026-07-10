@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Broadsheet';
+    src: url('Broadsheet-Italic.woff2') format('woff2'),
+        url('Broadsheet-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Broadsheet';
+    src: url('Broadsheet.woff2') format('woff2'),
+        url('Broadsheet.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'P22 Franklin Caslon';
+    src: url('P22FranklinCaslon-Italic.woff2') format('woff2'),
+        url('P22FranklinCaslon-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'P22 Franklin Caslon';
+    src: url('P22FranklinCaslon-Regular.woff2') format('woff2'),
+        url('P22FranklinCaslon-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schooner Script';
+    src: url('SchoonerScript.woff2') format('woff2'),
+        url('SchoonerScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Webster Italic WF';
+    src: url('WebsterItalicWF.woff2') format('woff2'),
+        url('WebsterItalicWF.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Webster Roman WF';
+    src: url('WebsterRomanWF.woff2') format('woff2'),
+        url('WebsterRomanWF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

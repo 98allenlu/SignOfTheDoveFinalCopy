@@ -38,11 +38,12 @@ add_action( 'wp_enqueue_scripts', function () {
         wp_get_theme()->get( 'Version' )
     );
 
-    // NOTE: P22 Franklin Caslon, Broadsheet, and Schooner Script are premium fonts.
-    // Purchase licenses, add woff2 files to assets/fonts/, create premium-fonts.css,
-    // then uncomment:
-    // wp_enqueue_style( 'rainbow-dove-premium-fonts',
-    //     get_template_directory_uri() . '/assets/fonts/premium-fonts.css', [], '1.0' );
+    // Self-hosted premium fonts: P22 Franklin Caslon, Broadsheet, Schooner Script
+    wp_enqueue_style(
+        'rainbow-dove-premium-fonts',
+        get_template_directory_uri() . '/assets/fonts/premium-fonts.css',
+        [], wp_get_theme()->get( 'Version' )
+    );
 
     // Inject PHP-resolved image URL CSS variables so all assets work correctly
     $uri = get_template_directory_uri();
@@ -65,11 +66,18 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 } );
 
-add_action( 'admin_enqueue_scripts', function () {
+add_action( 'enqueue_block_editor_assets', function () {
+    // Load fonts + styles inside the block editor so they render correctly
+    wp_enqueue_style(
+        'rainbow-dove-editor-fonts',
+        get_template_directory_uri() . '/assets/fonts/premium-fonts.css',
+        [], wp_get_theme()->get( 'Version' )
+    );
     wp_enqueue_style(
         'rainbow-dove-editor-style',
         get_template_directory_uri() . '/assets/css/theme.css',
-        [], wp_get_theme()->get( 'Version' )
+        [ 'rainbow-dove-editor-fonts' ],
+        wp_get_theme()->get( 'Version' )
     );
 } );
 

@@ -26,52 +26,68 @@
         {
           "fontFamily": "\"P22 Franklin Caslon\", Georgia, serif",
           "slug": "headline",
-          "name": "Headline"
-        },
-        {
-          "fontFamily": "\"Broadsheet\", Georgia, serif",
-          "slug": "heading",
-          "name": "Heading"
-        },
-        {
-          "fontFamily": "\"Libre Franklin\", system-ui, sans-serif",
-          "slug": "body",
-          "name": "Body",
+          "name": "Headline (P22 Franklin Caslon)",
           "fontFace": [
             {
-              "fontFamily": "Libre Franklin",
+              "fontFamily": "P22 Franklin Caslon",
               "fontWeight": "400",
               "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/libre-franklin-400.woff2" ]
+              "src": [ "file:./assets/fonts/P22FranklinCaslon-Regular.woff2", "file:./assets/fonts/P22FranklinCaslon-Regular.woff" ]
             },
             {
-              "fontFamily": "Libre Franklin",
-              "fontWeight": "500",
-              "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/libre-franklin-500.woff2" ]
-            },
-            {
-              "fontFamily": "Libre Franklin",
-              "fontWeight": "700",
-              "fontStyle": "normal",
-              "src": [ "file:./assets/fonts/libre-franklin-700.woff2" ]
+              "fontFamily": "P22 Franklin Caslon",
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "src": [ "file:./assets/fonts/P22FranklinCaslon-Italic.woff2", "file:./assets/fonts/P22FranklinCaslon-Italic.woff" ]
             }
           ]
         },
         {
+          "fontFamily": "\"Broadsheet\", Georgia, serif",
+          "slug": "heading",
+          "name": "Heading (Broadsheet)",
+          "fontFace": [
+            {
+              "fontFamily": "Broadsheet",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/fonts/Broadsheet.woff2", "file:./assets/fonts/Broadsheet.woff" ]
+            },
+            {
+              "fontFamily": "Broadsheet",
+              "fontWeight": "400",
+              "fontStyle": "italic",
+              "src": [ "file:./assets/fonts/Broadsheet-Italic.woff2", "file:./assets/fonts/Broadsheet-Italic.woff" ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Libre Franklin\", system-ui, sans-serif",
+          "slug": "body",
+          "name": "Body (Libre Franklin)"
+        },
+        {
           "fontFamily": "\"Schooner Script\", cursive",
           "slug": "accent-font",
-          "name": "Accent Script"
+          "name": "Accent Script (Schooner Script)",
+          "fontFace": [
+            {
+              "fontFamily": "Schooner Script",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "src": [ "file:./assets/fonts/SchoonerScript.woff2", "file:./assets/fonts/SchoonerScript.woff" ]
+            }
+          ]
         }
       ],
       "fontSizes": [
-        { "slug": "xs",       "size": "12px", "name": "XS" },
-        { "slug": "sm",       "size": "14px", "name": "SM" },
-        { "slug": "base",     "size": "16px", "name": "Base" },
-        { "slug": "md",       "size": "20px", "name": "MD" },
-        { "slug": "lg",       "size": "28px", "name": "LG" },
-        { "slug": "xl",       "size": "42px", "name": "XL" },
-        { "slug": "2xl",      "size": "56px", "name": "2XL" }
+        { "slug": "xs",  "size": "12px", "name": "XS" },
+        { "slug": "sm",  "size": "14px", "name": "SM" },
+        { "slug": "base","size": "16px", "name": "Base" },
+        { "slug": "md",  "size": "20px", "name": "MD" },
+        { "slug": "lg",  "size": "28px", "name": "LG" },
+        { "slug": "xl",  "size": "42px", "name": "XL" },
+        { "slug": "2xl", "size": "56px", "name": "2XL" }
       ]
     },
     "spacing": {
@@ -91,6 +107,11 @@
         }
       },
       "core/post-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--headline)"
+        }
+      },
+      "core/heading": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--headline)"
         }
@@ -169,14 +190,14 @@
     { "name": "footer", "title": "Footer", "area": "footer" }
   ],
   "customTemplates": [
-    { "name": "front-page",       "title": "Front Page",          "postTypes": [ "page" ] },
-    { "name": "archive",          "title": "Research Archive",     "postTypes": [ "post" ] },
-    { "name": "archive-product",  "title": "Shop Archive",         "postTypes": [ "product" ] },
-    { "name": "single",           "title": "Single Post",          "postTypes": [ "post" ] },
-    { "name": "single-product",   "title": "Single Product",       "postTypes": [ "product" ] },
-    { "name": "page-about",       "title": "About Page",           "postTypes": [ "page" ] },
-    { "name": "cart",             "title": "Cart",                 "postTypes": [ "page" ] },
-    { "name": "checkout",         "title": "Checkout",             "postTypes": [ "page" ] },
-    { "name": "search",           "title": "Search Results",       "postTypes": [ "post", "page" ] }
+    { "name": "front-page",      "title": "Front Page",     "postTypes": [ "page" ] },
+    { "name": "archive",         "title": "Research Archive","postTypes": [ "post" ] },
+    { "name": "archive-product", "title": "Shop Archive",    "postTypes": [ "product" ] },
+    { "name": "single",          "title": "Single Post",     "postTypes": [ "post" ] },
+    { "name": "single-product",  "title": "Single Product",  "postTypes": [ "product" ] },
+    { "name": "page-about",      "title": "About Page",      "postTypes": [ "page" ] },
+    { "name": "cart",            "title": "Cart",            "postTypes": [ "page" ] },
+    { "name": "checkout",        "title": "Checkout",        "postTypes": [ "page" ] },
+    { "name": "search",          "title": "Search Results",  "postTypes": [ "post", "page" ] }
   ]
 }
