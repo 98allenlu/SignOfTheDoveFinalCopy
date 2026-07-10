@@ -1,0 +1,75 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"default"},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+<main class="wp-block-group">
+
+	<!-- Cover header: secondary/purple colour matching React fillColor="#7EA172" (accent green) variant but About uses secondary -->
+	<!-- wp:cover {"minHeight":40,"minHeightUnit":"vh","isDark":true,"align":"full","style":{"color":{"background":"var(--wp--preset--color--secondary)"},"spacing":{"padding":{"top":"5rem","bottom":"8rem"}}}} -->
+	<div class="wp-block-cover alignfull" style="min-height:40vh;background-color:var(--wp--preset--color--secondary);padding-top:5rem;padding-bottom:8rem">
+		<div class="wp-block-cover__inner-container">
+			<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)","fontSize":"var(--wp--preset--font-size--2xl)"},"color":{"text":"var(--wp--preset--color--primary-foreground)"}}} -->
+			<h1 class="wp-block-heading has-text-align-center">About</h1>
+			<!-- /wp:heading -->
+		</div>
+	</div>
+	<!-- /wp:cover -->
+
+	<!-- Card panel that overlaps the cover (negative margin via CSS class) -->
+	<!-- wp:group {"align":"full","className":"rd-about-card-wrap","style":{"spacing":{"padding":{"top":"0","bottom":"5rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained","contentSize":"1216px"}} -->
+	<div class="wp-block-group alignfull rd-about-card-wrap" style="padding-bottom:5rem;padding-left:2rem;padding-right:2rem">
+
+		<!-- wp:group {"className":"rd-about-card","style":{"color":{"background":"#ffffff"},"border":{"radius":"8px"},"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"default"}} -->
+		<div class="wp-block-group rd-about-card" style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.15)">
+
+			<!-- wp:columns {"isStackedOnMobile":true,"style":{"spacing":{"blockGap":"0"}}} -->
+			<div class="wp-block-columns">
+
+				<!-- Image column -->
+				<!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+				<div class="wp-block-column" style="flex-basis:50%">
+					<!-- wp:image {"sizeSlug":"full","linkDestination":"none","style":{"image":{"objectFit":"cover"},"dimensions":{"minHeight":"467px"}},"className":"rd-about-portrait"} -->
+					<figure class="wp-block-image size-full rd-about-portrait"><img src="" alt="Portrait of Lucie" style="width:100%;height:100%;object-fit:cover;min-height:467px" /></figure>
+					<!-- /wp:image -->
+				</div>
+				<!-- /wp:column -->
+
+				<!-- Content column -->
+				<!-- wp:column {"width":"50%","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","left":"3rem","right":"3rem"}}}} -->
+				<div class="wp-block-column" style="flex-basis:50%;padding:3rem;display:flex;flex-direction:column;justify-content:center">
+
+					<!-- wp:heading {"level":2,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)","fontSize":"var(--wp--preset--font-size--lg)"},"color":{"text":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
+					<h2 class="wp-block-heading">Hello &amp; Welcome</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"var(--wp--preset--font-size--base)","lineHeight":"1.75"},"color":{"text":"rgba(0,0,0,0.8)"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
+					<p style="color:rgba(0,0,0,0.8);line-height:1.75">I&#8217;m Lucie. I&#8217;m an artist and historian specializing in 18th- and 19th-century art, material culture, and women&#8217;s history. With a decade of experience as a textile dyer, I have a deep technical and historical understanding of botanical dyes, with a particular interest in indigo.</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"var(--wp--preset--font-size--base)","lineHeight":"1.75"},"color":{"text":"rgba(0,0,0,0.8)"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
+					<p style="color:rgba(0,0,0,0.8);line-height:1.75">In addition to textile work, I&#8217;m an accomplished printmaker and graphic designer. I earned a BFA in Art History with a minor in Fine Arts in Drawing and Design from Moore College of Art and Design, and I&#8217;m currently pursuing a Master&#8217;s in Museum Studies at Johns Hopkins University.</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
+					<div class="wp-block-buttons">
+						<!-- wp:button {"backgroundColor":"primary","textColor":"primary-foreground","style":{"border":{"radius":"8px"},"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} -->
+						<div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-primary-foreground-color has-background has-text-color wp-element-button" href="/research">Explore Research</a></div>
+						<!-- /wp:button -->
+					</div>
+					<!-- /wp:buttons -->
+
+				</div>
+				<!-- /wp:column -->
+
+			</div>
+			<!-- /wp:columns -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

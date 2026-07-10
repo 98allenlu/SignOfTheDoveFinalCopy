@@ -111,6 +111,37 @@ function rd_inline_svg( string $filename ): string {
     return $svg;
 }
 
+// ── Homepage Setup (runs once on theme activation) ────────────────────────────
+//
+// Creates a "Home" page if it doesn't exist, then sets WordPress to use a
+// static front page so the front-page.html FSE template is loaded.
+
+add_action( 'after_switch_theme', function () {
+    // Only run if front page isn't already configured
+    if ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) ) {
+        return;
+    }
+
+    // Find or create the Home page
+    $home = get_page_by_path( 'home' );
+    if ( ! $home ) {
+        $home_id = wp_insert_post( [
+            'post_title'   => 'Home',
+            'post_name'    => 'home',
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+            'post_content' => '',
+        ] );
+    } else {
+        $home_id = $home->ID;
+    }
+
+    if ( $home_id && ! is_wp_error( $home_id ) ) {
+        update_option( 'show_on_front', 'page' );
+        update_option( 'page_on_front', $home_id );
+    }
+} );
+
 // ── WooCommerce ────────────────────────────────────────────────────────────────
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' ); // use our styles only

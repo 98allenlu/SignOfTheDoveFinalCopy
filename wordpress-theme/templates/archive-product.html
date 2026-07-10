@@ -1,39 +1,45 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<!-- wp:group {"tagName":"main","layout":{"type":"default"},"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
 <main class="wp-block-group">
 
-	<!-- wp:cover {"minHeight":25,"minHeightUnit":"vh","style":{"color":{"background":"var(--wp--preset--color--primary)"}}} -->
-	<div class="wp-block-cover" style="min-height:25vh;background-color:var(--wp--preset--color--primary)">
+	<!-- Cover: primary blue matching React fillColor="#00416A" -->
+	<!-- wp:cover {"minHeight":40,"minHeightUnit":"vh","isDark":true,"align":"full","style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"padding":{"top":"5rem","bottom":"8rem"}}}} -->
+	<div class="wp-block-cover alignfull" style="min-height:40vh;background-color:var(--wp--preset--color--primary);padding-top:5rem;padding-bottom:8rem">
 		<div class="wp-block-cover__inner-container">
 			<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--headline)","fontSize":"var(--wp--preset--font-size--2xl)"},"color":{"text":"var(--wp--preset--color--primary-foreground)"}}} -->
 			<h1 class="wp-block-heading has-text-align-center">The Shop</h1>
 			<!-- /wp:heading -->
-			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.85)"}}} -->
-			<p class="has-text-align-center">Hand-dyed yarns, handkerchiefs, and historical kits.</p>
+			<!-- wp:paragraph {"align":"center","style":{"color":{"text":"rgba(255,255,255,0.85)"},"typography":{"fontFamily":"var(--wp--preset--font-family--body)"}}} -->
+			<p class="has-text-align-center" style="color:rgba(255,255,255,0.85)">Hand-dyed yarns, handkerchiefs, and historical kits.</p>
 			<!-- /wp:paragraph -->
 		</div>
 	</div>
 	<!-- /wp:cover -->
 
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+	<!-- Category filter bar (white card overlapping cover) -->
+	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"2rem","left":"2rem","right":"2rem"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull" style="padding-bottom:2rem;padding-left:2rem;padding-right:2rem">
+
+		<!-- wp:group {"className":"rd-shop-filter-bar","style":{"color":{"background":"#ffffff"},"border":{"radius":"8px"},"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem","left":"2rem","right":"2rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"},"style":{"spacing":{"blockGap":"1rem"}}} -->
+		<div class="wp-block-group rd-shop-filter-bar" style="background:#fff;border-radius:8px;padding:1.5rem 2rem;box-shadow:0 8px 32px rgba(0,0,0,0.12);margin-bottom:2rem">
+			<!-- wp:product-filter-attribute {"attribute":"pa_product-category","showCounts":false,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} /-->
+		</div>
+		<!-- /wp:group -->
 
 		<!-- wp:woocommerce/store-notices /-->
 
+		<!-- Product grid -->
 		<!-- wp:woocommerce/product-collection {"query":{"perPage":12,"order":"asc","orderBy":"date"},"queryContextIncludes":["collection"],"displayLayout":{"type":"flex","columns":3}} -->
 		<div class="wp-block-woocommerce-product-collection">
-
 			<!-- wp:woocommerce/product-template -->
 				<!-- wp:pattern {"slug":"rainbow-dove/query-loop-product-card"} /-->
 			<!-- /wp:woocommerce/product-template -->
-
 			<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"3rem"}}}} -->
 				<!-- wp:query-pagination-previous /-->
 				<!-- wp:query-pagination-numbers /-->
 				<!-- wp:query-pagination-next /-->
 			<!-- /wp:query-pagination -->
-
 		</div>
 		<!-- /wp:woocommerce/product-collection -->
 
