@@ -46,7 +46,8 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 
     // Inject PHP-resolved image URL CSS variables so all assets work correctly
-    $uri = get_template_directory_uri();
+    $uri      = get_template_directory_uri();
+    $font_dir = $uri . '/assets/fonts';
     $inline_css = "
         :root {
             --rd-header-bg:       url('{$uri}/assets/images/header-bg.png');
@@ -54,6 +55,24 @@ add_action( 'wp_enqueue_scripts', function () {
             --rd-section-texture: url('{$uri}/assets/images/section-texture.png');
             --rd-cover-shape:     url('{$uri}/assets/svg/cover-block-shape.svg');
             --rd-torn-edge:       url('{$uri}/assets/svg/torn-paper-edge.svg');
+        }
+        @font-face {
+            font-family: 'Broadsheet';
+            src: url('{$font_dir}/Broadsheet.woff2') format('woff2'),
+                 url('{$font_dir}/Broadsheet.woff') format('woff');
+            font-weight: normal; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'P22 Franklin Caslon';
+            src: url('{$font_dir}/P22FranklinCaslon-Regular.woff2') format('woff2'),
+                 url('{$font_dir}/P22FranklinCaslon-Regular.woff') format('woff');
+            font-weight: normal; font-style: normal; font-display: swap;
+        }
+        @font-face {
+            font-family: 'Schooner Script';
+            src: url('{$font_dir}/SchoonerScript.woff2') format('woff2'),
+                 url('{$font_dir}/SchoonerScript.woff') format('woff');
+            font-weight: normal; font-style: normal; font-display: swap;
         }
     ";
     wp_add_inline_style( 'rainbow-dove-style', $inline_css );

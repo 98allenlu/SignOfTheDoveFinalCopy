@@ -10,7 +10,7 @@
 
 $shape_svg = function_exists( 'rd_inline_svg' ) ? rd_inline_svg( 'cover-block-shape.svg' ) : '';
 ?>
-<!-- wp:group {"className":"rd-cover-block","style":{"color":{"background":"var(--rd-primary)","text":"var(--rd-primary-foreground)"},"spacing":{"padding":{"top":"4rem","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:group {"className":"rd-cover-block","align":"full","style":{"color":{"background":"var(--rd-primary)","text":"var(--rd-primary-foreground)"},"spacing":{"padding":{"top":"4rem","bottom":"0"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group rd-cover-block" style="background-color:var(--rd-primary);color:var(--rd-primary-foreground);padding-top:4rem">
 
 	<!-- wp:post-title {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--rd-font-headline)","fontSize":"var(--wp--preset--font-size--2xl)"},"color":{"text":"var(--rd-primary-foreground)"},"spacing":{"padding":{"bottom":"3rem"}}}} /-->

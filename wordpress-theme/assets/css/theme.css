@@ -101,6 +101,9 @@ p,
 /* Inner row: 170px tall, full width, space-between */
 .site-header__inner.wp-block-group {
   width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   min-height: 170px;
   padding: 0 2rem !important;
   display: flex !important;
