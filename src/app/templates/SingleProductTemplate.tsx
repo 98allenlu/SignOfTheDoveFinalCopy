@@ -8,7 +8,7 @@ interface ShopItem {
   title: string;
   price: string;
   category: string;
-  image: string;
+  featured_image: string;
   slug: string;
 }
 
@@ -84,8 +84,8 @@ export function SingleProductTemplate({ product, relatedProducts = [] }: Product
         </Link>
       </div>
 
-      {/* Main product grid */}
-      <div className="w-full px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      {/* Main product grid: responsive 1→2 col, wired to WooCommerce add-to-cart */}
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Image */}
         <div className="relative">
           <div className="aspect-square w-full overflow-hidden bg-muted rounded-sm">
@@ -209,7 +209,7 @@ export function SingleProductTemplate({ product, relatedProducts = [] }: Product
           >
             You may also like
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {relatedProducts.map(item => (
               <Link key={item.id} to={`/shop/${item.slug}`} className="group flex flex-col gap-3">
                 <div className="aspect-square overflow-hidden bg-muted rounded-sm">

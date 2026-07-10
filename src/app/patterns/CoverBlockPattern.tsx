@@ -14,10 +14,11 @@ export function PageHeaderShape({
   ...props
 }: PageHeaderShapeProps) {
   return (
-    <div className={cn("relative w-full h-[370px] flex items-start pt-10 justify-center text-white", className)} {...props}>
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+    <div className={cn("relative w-full h-[370px] text-white overflow-hidden", className)} {...props}>
+      {/* Full-bleed background shape — object-cover fills the container */}
+      <div className="absolute inset-0 w-full h-full">
         <svg
-          className="w-full h-auto block min-h-[170px]"
+          className="w-full h-full"
           width="100%"
           height="100%"
           fill="none"
@@ -27,7 +28,8 @@ export function PageHeaderShape({
           <path d={svgPaths.p1cbb9000} fill={fillColor} />
         </svg>
       </div>
-      <div className="relative z-10 w-full px-4 text-center mt-[15px]">
+      {/* Title centered over the image — absolute inset-0 flex items-center justify-center */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4 container mx-auto max-w-7xl">
         {children}
       </div>
     </div>

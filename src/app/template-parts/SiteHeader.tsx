@@ -62,8 +62,8 @@ export function SiteHeader() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="w-full px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-[170px]"> {/* Increased height from h-24 to h-28 */}
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-[170px]">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex flex-col items-start justify-center group">
             <span className="font-headline text-xl md:text-2xl text-black leading-tight group-hover:text-black/80 transition-colors">
