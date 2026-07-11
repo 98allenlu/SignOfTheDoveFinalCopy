@@ -14,7 +14,7 @@ export default function ShopArchiveTemplate() {
 
       </PageHeaderShape>
 
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-[-5rem] relative z-10 pb-20">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-[-10rem] relative z-10 pb-20">
         {/* Category filter bar */}
         <div className="bg-white rounded-lg shadow-xl p-8 mb-10">
           <div className="flex flex-wrap gap-4 justify-center">

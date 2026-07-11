@@ -320,34 +320,50 @@ p,
 }
 
 /* ── Cover Block Pattern (page header shape) ─────────────────────────────── */
+/* Mirrors React: height 370px, flex align-items:flex-start, pt-10, justify-center */
 .rd-cover-block {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  background-color: var(--rd-primary);
+  height: 370px;
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: center;
   color: var(--rd-primary-foreground);
+  overflow: hidden;
 }
 
-.rd-cover-block .rd-shape-overlay {
+/* SVG background — absolute, fills from top-left, no aspect ratio lock */
+.rd-cover-bg {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
   line-height: 0;
-  color: var(--rd-background);   /* SVG uses currentColor */
 }
 
-.rd-cover-block .rd-shape-overlay svg {
+.rd-cover-bg svg {
   display: block;
   width: 100%;
   height: auto;
+  min-height: 170px;  /* matches React min-h-[170px] */
 }
 
-.rd-cover-block .wp-block-cover__inner-container {
+.rd-cover-bg__fallback {
+  width: 100%;
+  height: 100%;
+  background-color: var(--rd-primary);
+}
+
+/* Content on top — relative z-10, 15px from top matches React mt-[15px] */
+.rd-cover-content {
   position: relative;
-  z-index: 1;
-  padding: 3rem 2rem 5rem;
+  z-index: 10;
+  width: 100%;
+  padding: 0 1rem;
   text-align: center;
+  margin-top: 15px;
 }
 
 /* ── Separator / Section Pattern ─────────────────────────────────────────── */
